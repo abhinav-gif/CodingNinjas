@@ -12,6 +12,7 @@ bool checkPrime(int n){
 
 int main(){
     int n;
+    cout<<"Enter Number"<<endl;
     cin>>n;
     if(checkPrime(n)){
         cout<<"Yes"<<endl;

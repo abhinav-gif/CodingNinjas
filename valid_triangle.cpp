@@ -21,6 +21,7 @@ int sqaure(int a,int b,int c){
 
 int main(){
     int a,b,c;
+    cout<<"Enter length of sides of a triangle "<<endl;
     cin>>a>>b>>c;
     int max_=max(a,b,c);
     int Total_sq=sqaure(a,b,c);
