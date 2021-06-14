@@ -24,6 +24,14 @@ int main()
             if (arr[start] + arr[end] == x)
             {
                 count++;
+                while (start < n - 1 && arr[start] == arr[start + 1])
+                    {
+                        start++;
+                    }
+                    while (end > 0 && arr[end] == arr[end - 1])
+                    {
+                        end--;
+                    }
                 start++;
                 end--;
             }
@@ -35,7 +43,7 @@ int main()
             {
                 start++;
             }
-        }
+        }delete []arr;
         cout << count << endl;
     }
 }
