@@ -4,11 +4,20 @@ using namespace std;
 
 int main()
 {
-    int n, input, max = INT_MIN, s_max = INT_MIN;
-    cin >> n;
-    for (int i = 0; i < n; i++)
+    int t;
+    cin >> t;
+    while (t--)
     {
-        cin >> input;
+        int n, max = INT_MIN, s_max = INT_MIN;
+        cin >> n;
+        int *arr = new int[n];
+        for (int i = 0; i < n; i++)
+        {
+            cin >> arr[i];
+        }
+        for (int i = 0; i < n; i++)
+    {
+        int input=arr[i];
         if (i == 0)
         {
             max = input;
@@ -21,7 +30,7 @@ int main()
                 s_max = max;
                 max = input;
             }
-            else if (input > s_max)
+            else if (input > s_max )
             {
                 s_max = input;
             }
@@ -34,5 +43,7 @@ int main()
     else
     {
         cout << s_max << endl;
+    }
+        delete[] arr;
     }
 }
